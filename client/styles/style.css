@@ -41,7 +41,7 @@ body {
 }
 
 button.btn {
-  padding: 6px 12px;
+  padding: 8px 12px;
   cursor: pointer;
   border: 1px solid #a5a2a2;
   color: #6e6c6c;
@@ -110,11 +110,14 @@ body .wrap input:focus {
 }
 
 body .wrap label {
-  margin: 5px 0;
   font-size: 9pt;
   color: #817e7e;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.container-input {
+  margin-top: 5px;
 }
 
 .buttons {
