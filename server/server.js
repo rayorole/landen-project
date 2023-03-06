@@ -77,8 +77,8 @@ app.delete("/:id", (req, res) => {
 // Update een land in de database en stuur een bericht terug naar de client (browser)
 app.put("/:id", (req, res) => {
   db.run(
-    "UPDATE landen SET naam = ?, hoofdstad = ? WHERE id = ?",
-    [req.body.naam, req.body.hoofdstad, req.params.id],
+    "UPDATE landen SET land = ?, hoofdstad = ? WHERE id = ?",
+    [req.body.land, req.body.hoofdstad, req.params.id],
     (err) => {
       if (err) {
         res.json({ error: err.message });

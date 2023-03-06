@@ -78,6 +78,7 @@ function deleteCountry(id) {
   });
 }
 
+// Functie om een land toe te voegen, met een POST request
 function insertCountry() {
   // Haal de data op uit de input velden
   const country = document.querySelector("#country-insert").value;
@@ -107,6 +108,41 @@ function insertCountry() {
         // Ververs de tabel met de nieuwe data
         getCountries();
         successMessage("Land is toegevoegd");
+      }
+    });
+  });
+}
+
+function updateCountry() {
+  // Haal de data op uit de input velden
+  const country = document.querySelector("#country-update").value;
+  const capital = document.querySelector("#capital-update").value;
+  const id = document.querySelector("#id-update").value;
+
+  // Maak een object van de data
+  const data = {
+    land: country,
+    hoofdstad: capital,
+  };
+
+  // Voeg een land toe met een PUT request
+  fetch(`http://localhost:3000/${id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  }).then((response) => {
+    response.json().then((data) => {
+      if (data.error) {
+        // Als er een error is, log deze dan in de console
+        console.log(data.error);
+      } else {
+        // Anders log de data in de console en voeg de HTML tabel toe
+        console.log(data);
+        // Ververs de tabel met de nieuwe data
+        getCountries();
+        successMessage("Land is aangepast");
       }
     });
   });

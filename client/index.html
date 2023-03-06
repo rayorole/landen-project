@@ -53,10 +53,16 @@
         </div>
         <div class="container-input">
           <label for="update">Update een land</label><br />
-          <input type="number" placeholder="Typ een ID" />
-          <input type="text" placeholder="Typ een land" />
-          <input type="text" placeholder="Typ een hoofdstad" />
-          <button class="btn btn-primary" id="edit">Update</button>
+          <input type="number" placeholder="Typ ID van land" id="id-update" />
+          <input type="text" placeholder="Aangepast land" id="country-update" />
+          <input
+            type="text"
+            placeholder="Aangepaste hoofdstad"
+            id="capital-update"
+          />
+          <button class="btn btn-primary" id="edit" onclick="updateCountry()">
+            Update
+          </button>
         </div>
         <div class="container-input">
           <label for="insert">Voeg een land toe</label><br />
@@ -70,6 +76,9 @@
             Voeg toe
           </button>
         </div>
+      </div>
+      <div>
+        <pre class="watermark">Made by Ray Orolé ❤️</pre>
       </div>
       <div class="table-wrapper">
         <table class="table-responsive card-list-table">

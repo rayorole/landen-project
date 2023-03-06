@@ -213,3 +213,7 @@ body .wrap label {
   background: #c44c4c;
   color: white;
 }
+
+.watermark {
+  color: #6e6c6c;
+}
