@@ -11,5 +11,4 @@
 
 ---
 ### Links
-
-[Github repository]("https://github.com/rayorole/landen-project")
+[Github repository](https://github.com/rayorole/landen-project)
