@@ -33,9 +33,15 @@ function getCountries() {
         console.log(data.error);
       } else {
         // Anders log de data in de console en laat deze zien in de HTML tabel
-        console.log(data);
-        data.forEach((country) => {
-          document.querySelector("tbody").innerHTML += `
+        if (data.length === 0) {
+          document.querySelector("tbody").innerHTML = `
+          <tr>
+            <td colspan="4" style="text-align: center; font-family: system-ui, -apple-system; color: #a5a2a2;">Geen data gevonden</td>
+          </tr>
+        `;
+        } else {
+          data.forEach((country) => {
+            document.querySelector("tbody").innerHTML += `
           <tr>
             <td>${country.id}</td>
             <td>${country.land}</td>
@@ -48,7 +54,8 @@ function getCountries() {
             </td>
           </tr>
         `;
-        });
+          });
+        }
       }
     });
   });
