@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Toaster CDN -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script
+      defer
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Landen Database</title>
+
+    <script src="app.js" defer></script>
+  </head>
+  <body class="large-screen">
+    <div class="wrap">
+      <div class="btn-toolbar buttons">
+        <div>
+          <label for="search">Zoek een land</label><br />
+          <input type="text" id="search" placeholder="Zoek een land" />
+          <button class="btn btn-primary" id="add">Zoek</button>
+        </div>
+        <div>
+          <label for="update">Update een land</label><br />
+          <input type="number" placeholder="Typ een ID" />
+          <input type="text" placeholder="Typ een land" />
+          <input type="text" placeholder="Typ een hoofdstad" />
+          <button class="btn btn-primary" id="edit">Update</button>
+        </div>
+      </div>
+      <div class="table-wrapper">
+        <table class="table-responsive card-list-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Land</th>
+              <th>Hoofdstad</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
